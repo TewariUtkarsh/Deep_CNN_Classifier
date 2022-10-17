@@ -27,7 +27,10 @@ list_of_files= [
     'setup.cfg',
     'pyproject.toml',
     'tox.ini',
-    'research/trials.ipynb'
+    'research/trials.ipynb',
+    'tests/__init__.py',
+    'tests/unit/__init__.py',
+    'tests/integration/__init__.py',
 ]
 
 for filepath in list_of_files:
