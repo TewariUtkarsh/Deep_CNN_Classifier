@@ -1,0 +1,7 @@
+root_artifact_dir: artifacts
+
+data_ingestion:
+  artifact_dir: artifacts/data_ingestion
+  source_download_url: https://download.microsoft.com/download/3/E/1/3E1C3F21-ECDB-4869-8368-6DEBA77B919F/kagglecatsanddogs_5340.zip
+  downloaded_data_file_path: artifacts/data_ingestion/data.zip
+  unzipped_data_dir: artifacts/data_ingestion
