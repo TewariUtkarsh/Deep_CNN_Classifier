@@ -10,9 +10,13 @@ pyYAML
 tqdm
 ensure==1.0.2
 joblib
+progressbar
+rangehttpserver
+types-PyYAML
 -e .
 
 ## Dev Requirements
+pytest-mpl
 pytest==7.1.3
 mypy==0.971
 flake8==5.0.4
