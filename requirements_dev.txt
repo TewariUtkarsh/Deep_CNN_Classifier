@@ -1,0 +1,20 @@
+tensorflow
+dvc
+pandas
+notebook
+numpy
+matplotlib
+seaborn
+python-box==6.0.2
+pyYAML
+tqdm
+ensure==1.0.2
+joblib
+-e .
+
+## Dev Requirements
+pytest==7.1.3
+mypy==0.971
+flake8==5.0.4
+tox==3.25.1
+black==22.8.0
