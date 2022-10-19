@@ -31,7 +31,6 @@ setuptools.setup(
     project_urls= {
         'Bugs': f'https://github.com/{AUTHOR_NAME}/{REPO_NAME}/issues'
     },
-    install_requires=get_requirements_packages(filepath=REQUIREMENT_FILEPATH),
     package_dir={"": "src"},
     packages=setuptools.find_packages(where='src')
 )
