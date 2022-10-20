@@ -14,3 +14,5 @@ class Temp:
   @property
   def div(self, x:int, y:int) -> int:
     return x//y
+
+ t= Temp()
