@@ -15,4 +15,7 @@ prepare_callbacks:
   artifact_dir: artifacts/prepare_callbacks
   tensorboard_log_dir: artifacts/prepare_callbacks/tensorboard_log_dir
   checkpoint_model_filepath: artifacts/prepare_callbacks/checkpoints/model.h5
-  
+
+model_training:
+  artifact_dir: artifacts/model_training
+  trained_model_filepath: artifacts/model_training/model.h5
