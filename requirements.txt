@@ -13,4 +13,5 @@ joblib
 types-PyYAML
 progressbar
 scipy
+mlflow==1.26.1
 -e .
