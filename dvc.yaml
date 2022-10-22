@@ -1,0 +1,43 @@
+stages:
+
+  data_ingestion:
+    cmd: python src/DeepClassifier/pipeline/stage_01_data_ingestion.py
+    deps:
+      - src/DeepClassifier/pipeline/stage_01_data_ingestion.py
+      - configs/config.yaml
+    outs:
+      - artifacts/data_ingestion/PetImages
+
+
+  prepare_base_model:
+    cmd: python src/DeepClassifier/pipeline/stage_02_prepare_base_model.py
+    deps:
+      - src/DeepClassifier/pipeline/stage_02_prepare_base_model.py
+      - configs/config.yaml
+      - params.yaml
+    outs:
+      - artifacts/prepare_base_model
+
+
+  model_training:
+    cmd: python src/DeepClassifier/pipeline/stage_03_04_model_training.py
+    deps:
+      - src/DeepClassifier/pipeline/stage_03_04_model_training.py
+      - src/DeepClassifier/components/prepare_callbacks.py
+      - configs/config.yaml
+      - artifacts/data_ingestion/PetImages
+      - artifacts/prepare_base_model
+      - params.yaml
+    outs:
+      - artifacts/model_training/model.h5
+
+  model_evaluation:
+    cmd: python src/DeepClassifier/pipeline/stage_05_model_evaluation.py
+    deps:
+      - configs/config.yaml
+      - params.yaml
+      - artifacts/data_ingestion/PetImages
+      - artifacts/model_training/model.h5
+    metrics:
+      - scores.json:
+          cache: false
