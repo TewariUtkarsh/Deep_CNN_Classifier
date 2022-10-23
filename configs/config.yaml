@@ -19,3 +19,11 @@ prepare_callbacks:
 model_training:
   artifact_dir: artifacts/model_training
   trained_model_filepath: artifacts/model_training/model.h5
+
+model_evaluation:
+  scores_filepath: scores.json
+  trained_model_filepath: artifacts/model_training/model.h5
+  test_data_dir: artifacts/data_ingestion
+  remote_server_uri: https://dagshub.com/TewariUtkarsh/Deep_CNN_Classifier.mlflow
+  train_params: 
+    epochs: 1
