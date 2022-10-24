@@ -30,3 +30,9 @@ STEP 4: Use context manager of mlflow to start run and then log metrics, params 
 
 ## Docker
 docker run -i -dp {windows_port(HOST)}:{container_port} {image}
+
+
+## Sample Data for testing
+https://github.com/TewariUtkarshDeep_CNN_Classifier/raw/master/sample_data.zip
+
+https://raw.githubusercontent.com/TewariUtkarsh/Deep_CNN_Classifier/master/sample_data.zip
